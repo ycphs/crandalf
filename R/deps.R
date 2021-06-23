@@ -1,4 +1,7 @@
 owd = setwd('package')
+
+install.packages(c("Rcpp","zip"))
+
 pkg_name = function(desc = 'DESCRIPTION') {
   if (file.exists(desc)) read.dcf(desc, fields = c('Package'))[1, 1] else NA
 }
